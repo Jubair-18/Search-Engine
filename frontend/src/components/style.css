@@ -55,3 +55,16 @@
 
 
 
+ 
+/* responsive */
+
+@media screen and (max-width: 800px) {
+  .navbar{
+    width: 100%;
+  }
+  .navbar__logo{
+    display: none;
+    visibility: hidden;
+    width: 0px;
+  }
+}

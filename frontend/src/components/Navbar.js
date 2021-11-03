@@ -27,9 +27,9 @@ const Navbar = () => {
     return (
 
             <ThemeProvider theme={theme}>
-            <AppBar position="static">
+            <AppBar position="static" className="navber">
                 <Box style={{ display: "flex" , flexDirection: "row" , justifyContent: "space-between" }}>
-                    <Toolbar style={{ fontSize: "2rem"}}> <img src="https://cdn.pixabay.com/photo/2017/08/22/22/11/monogram-2670684_960_720.png" style={{ height: "2rem", width: "2rem", backgroundColor: "gray", border: "1px solid gray", borderRadius: "50%"}} /> Miraz ??</Toolbar>
+                    <Toolbar style={{ fontSize: "2rem"}} className="navbar__logo"> <img src="https://cdn.pixabay.com/photo/2017/08/22/22/11/monogram-2670684_960_720.png" style={{ height: "2rem", width: "2rem", backgroundColor: "gray", border: "1px solid gray", borderRadius: "50%"}} /> Miraz ??</Toolbar>
                     <Toolbar> <Search /> </Toolbar>
                 </Box>
                 <Box style = {{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", marginBottom: "10px" }}>

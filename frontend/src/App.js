@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from './components/Navbar';
 import { Results } from './components/Results';
 import Footer from './components/Footer';
-
+import { Routes } from './components/Routes'
 
 export default function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -24,8 +24,10 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+     
       <Navbar/>
       <Results />
+      <Routes />
       <Footer />
     </ThemeProvider>
   );

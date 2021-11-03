@@ -3,14 +3,14 @@ import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material'
 import { useStateContext } from './context';
-import { CircularProgress } from '@mui/material';
+import Loading from './Loading'
 
 import './style.css';
 
 export const Results = () => {
   const { results, loading, getResults, searchTerm } = useStateContext();
   const location = useLocation();
-console.log(results.entries)
+
   useEffect(() => {
     if (searchTerm !== '') {
       if (location.pathname === '/videos') {
@@ -21,12 +21,12 @@ console.log(results.entries)
     }
   }, [searchTerm, location.pathname]);
 
-  if (loading) return <CircularProgress />;
+  if (loading) return <Loading />;
 
   switch (location.pathname) {
     case '/search':
       return (
-        <Box style={{ color: "white"}}>
+        <Box style={{width: "100%", color: "white"}}>
           {results?.results?.map(({ link, title, description, cite}, index) => (
             <Box key={index} style={{ padding: "2rem", color: "white", borderBottom: "1px solid grey"}}>
               <a href={link} target="_blank" rel="noreferrer" style={{ color: "whitesmoke", textDecoration: "none"}}>
